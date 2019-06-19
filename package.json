@@ -37,6 +37,7 @@
   },
   "scripts": {
     "prepackage": "tsc",
-    "package": "gulp package"
+    "package": "gulp package",
+    "prepare": "npm run package"
   }
 }
