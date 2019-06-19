@@ -38,7 +38,8 @@
   "scripts": {
     "prepackage": "tsc",
     "package": "gulp package",
-    "prepare": "npm run package"
+    "prepare": "npm run package",
+    "postprepare": "gulp post-prepare"
   },
-  "main": "build/package/index.js"
+  "main": "./index.js"
 }

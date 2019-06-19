@@ -94,4 +94,25 @@ export class Gulpfile {
         return ["package", "npmPublish"];
     }
 
+    @Task()
+    prepareMove() {
+        return gulp.src("./build/package/**/*")
+            .pipe(gulp.dest("."));
+    }
+
+    @Task()
+    prepareDelete() {
+        return del(['./**', '!./build/package/**', '!./gulpfile.*']);
+    }
+
+    @Task()
+    prepareDeleteBuild() {
+        return del(['./build/**']);
+    }
+
+    @SequenceTask("post-prepare")
+    postPrepare() {
+        return ["prepareDelete", "prepareMove", "prepareDeleteBuild"];
+    }
+
 }
