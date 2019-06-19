@@ -102,7 +102,7 @@ export class Gulpfile {
 
     @Task()
     prepareDelete() {
-        return del(['*', 'src', '!build', '!build/package', '!build/package/**', '!gulpfile.*']);
+        return del(['*', 'src', '!node_modules', '!build', '!build/package', '!build/package/**', '!gulpfile.*']);
     }
 
     @Task()
