@@ -96,18 +96,18 @@ export class Gulpfile {
 
     @Task()
     prepareMove() {
-        return gulp.src("./build/package/**/*")
+        return gulp.src("build/package/**/*")
             .pipe(gulp.dest("."));
     }
 
     @Task()
     prepareDelete() {
-        return del(['./**', '!./build/package/**', '!./gulpfile.*']);
+        return del(['*', 'src', '!build', '!build/package', '!build/package/**', '!gulpfile.*']);
     }
 
     @Task()
     prepareDeleteBuild() {
-        return del(['./build/**']);
+        return del(['build/**']);
     }
 
     @SequenceTask("post-prepare")
