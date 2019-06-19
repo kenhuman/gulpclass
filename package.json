@@ -39,7 +39,7 @@
     "prepackage": "tsc",
     "package": "gulp package",
     "prepare": "npm run package",
-    "postprepare": "gulp post-prepare"
+    "postinstall": "gulp post-prepare"
   },
   "main": "./index.js"
 }
