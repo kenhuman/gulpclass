@@ -1,7 +1,7 @@
 {
   "name": "gulpclass",
   "version": "0.2.0",
-  "private": true,
+  "private": false,
   "description": "Make a beautiful class-based gulpfiles with Typescript and Gulpfile.ts",
   "license": "Apache-2.0",
   "readmeFilename": "README.md",
@@ -38,8 +38,7 @@
   "scripts": {
     "prepackage": "tsc",
     "package": "gulp package",
-    "prepare": "npm run package",
-    "postinstall": "gulp post-prepare"
+    "prepare": "npm run package && gulp post-prepare"
   },
   "main": "./index.js"
 }
