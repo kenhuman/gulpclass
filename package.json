@@ -40,7 +40,5 @@
     "package": "gulp package",
     "prepare": "npm run package"
   },
-  "files": [
-    "/build/package"
-  ]
+  "main": "build/package/index.js"
 }
